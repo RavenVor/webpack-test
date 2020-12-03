@@ -8,7 +8,7 @@
   </head>
 
   <body>
-    <form class="feedback__form">
+    <!-- <form class="feedback__form">
       <label>
         <b>Ім'я</b>
         <br />
@@ -18,21 +18,39 @@
           placeholder="Введіть ваше ім'я"
           value="Анонімус"
         />
-        <br />
+        
       </label>
       <label>
-        <br />
+        
         <b>Відгук</b>
-        <br />
-        <br />
+        
         <textarea
           class="feedback__form-message"
           name="message"
           rows="6"
         ></textarea>
       </label>
-      <br />
+      
       <button type="submit">Залишити відгук</button>
-    </form>
+    </form> -->
+    <ul class="gallery__list"></ul>
+
+    <!-- <template id="list-item">
+      {{#each items}}
+      <li>
+        <a href="">{{this}}</a>
+      </li>
+      {{/each}}
+    </template>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
+
+    <script>
+      const html = document.querySelector('#list-item').innerHTML.trim();
+      const template = Handlebars.compile(html);
+      const markap = template({ items: ['HTML', 'CSS', 'JS', 'REACT'] });
+      console.log(markap);
+      const galleryRef = document.querySelector('.gallery__list');
+      galleryRef.insertAdjacentHTML('beforeend', markap);
+    </script> -->
   </body>
 </html>

@@ -20,13 +20,10 @@ const refs = {
   textarea: document.querySelector('textarea.feedback__form-message'),
 };
 
+populateMessage();
+
 refs.form.addEventListener('submit', hendelForm);
 refs.textarea.addEventListener('input', hendleTextareaInput);
-
-const savedMessage = localStorage.getItem('feedback-message');
-if (savedMessage) {
-  refs.textarea.value = savedMessage;
-}
 
 function hendelForm(e) {
   e.preventDefault();
@@ -43,7 +40,9 @@ function hendleTextareaInput(e) {
   localStorage.setItem('feedback-message', message);
 }
 
-// if (saveMessage) {
-//   //   refs.textarea.value = savedMessage;
-//   console.log(savedMessage);
-// }
+function populateMessage() {
+  const savedMessage = localStorage.getItem('feedback-message');
+  if (savedMessage) {
+    refs.textarea.value = savedMessage;
+  }
+}
